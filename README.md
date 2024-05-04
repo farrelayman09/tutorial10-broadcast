@@ -15,3 +15,22 @@ After that I tried running a second client on another terminal window. Then i ty
 the first client. After I pressed enter, the message is also show in the second the client side
 indicating that clients can successfully chat with each other. The mechanism behind this is that the message will be sent to the server and 
 the server will continue to forward it to all clients currently connected to it.  
+
+### 2. “Experiment 2.2: Modifying port”
+
+<img src= "assets/images/Screen Shot 2024-05-04 at 19.02.18.png" width="600px"> <br>
+From the image above, it can be seen that the program can run just as well as 
+before. This is because as long as the client and server agree on the same port to listen to,
+it will run correctly. I do this by also altering the code that control the server's port to
+
+```
+let listener = TcpListener::bind("127.0.0.1:8080").await?;
+    println!("listening on port 8080");
+```
+However if we only alter the server side's port the result in the image below will occur.
+
+
+<img src= "assets/images/Screen Shot 2024-05-04 at 19.02.44.png" width="600px"> <br>
+In this example, I only alter the client's port to 8080 while the server is still at 2000.
+This can result in an unsuccessful network connection establishment because the target server of 2000 
+is not currently accepting connections.
