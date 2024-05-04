@@ -27,7 +27,7 @@ it will run correctly. I do this by also altering the code that control the serv
 let listener = TcpListener::bind("127.0.0.1:8080").await?;
     println!("listening on port 8080");
 ```
-However if we only alter the server side's port the result in the image below will occur.
+However if we only alter the client side's port and not the server's as well, the result in the image below will occur.
 
 
 <img src= "assets/images/Screen Shot 2024-05-04 at 19.02.44.png" width="750px"> <br>
