@@ -35,7 +35,7 @@ In this example, I only alter the client's port to 8080 while the server is stil
 This can result in an unsuccessful network connection establishment because the target server of 2000 
 is not currently accepting connections.
 
-### 2. ““Experiment 2.3: Small changes, add IP and Port”
+### 3. “Experiment 2.3: Small changes, add IP and Port”
 <img src= "assets/images/Screen Shot 2024-05-04 at 19.30.48.png" width="750px"> <br>
 
 It can be seen that I've modified the client's side to show my custom source message. I did this by
